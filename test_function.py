@@ -125,6 +125,13 @@ def test_out_of_range_input_1_p_1():
     expected_result = "input integer"
     actual_result = validate_number(input)
     assert expected_result == actual_result
+ 
+@pytest.mark.validate # pytest -m validate
+def test_input_integer_input_13_1():  
+    input = 13.1
+    expected_result = "out of range"
+    actual_result = validate_number(input)
+    assert expected_result == actual_result
 
 
 @pytest.mark.validate
